@@ -1,0 +1,40 @@
+---
+title: "My first HTML Markdown"
+author: "Ankita Mahadik"
+date: "06/05/2021"
+output: html_document
+---
+Let's include dataset mtcars.
+
+```{r}
+df = mtcars
+head(df)
+```
+
+To get a summary of the data:-
+
+```{r}
+summary(df)
+
+```
+
+Generating a frequency table:-
+
+```{r}
+table(df$vs)
+```
+
+
+Creating a pie chart of cylinders column :-
+
+```{r}
+pie(table(df$cyl))
+
+```
+
+Creating a bar graph of horsepower column :-
+
+```{r}
+barplot(df$hp, ylim = c(0,500))
+```
+

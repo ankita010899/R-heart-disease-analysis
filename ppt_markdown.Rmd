@@ -1,0 +1,53 @@
+---
+title: "Powerpoint using R Markdown"
+author: "Ankita Mahadik"
+date: "06/05/2021"
+output: powerpoint_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## mtcars Dataset Analysis
+
+The data was extracted from the 1974 Motor Trend US magazine, and comprises fuel consumption and 10 aspects of automobile design and performance for 32 automobiles (1973–74 models).
+
+This is a data frame with 32 observations on 11 (numeric) variables.
+
+
+## Contents
+
+- Loading Libraries
+- Dataset Structure
+- Some Visualizations
+
+## Loading Libraries
+
+```{r echo=TRUE, warning=FALSE, message=FALSE}
+library(tidyverse)
+library(ggplot2)
+```
+
+## Dataset Structure
+
+```{r}
+str(mtcars)
+```
+
+## Some Visualizations
+Using ggplot :-
+```{r echo=TRUE}
+ggplot(mtcars, mapping = aes(x=mpg,y=hp))+
+  geom_point()+
+  theme_minimal()
+```
+
+## Some Visualizations
+Pie chart of gear column :-
+```{r echo=TRUE}
+pie(table(mtcars$gear))
+```
+
+
+## THANK YOU!
